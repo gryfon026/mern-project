@@ -9,20 +9,21 @@ const Posts = () => {
     const posts = useSelector((state) => state.posts);
     const classes = useStyles();
 
-    console.log(posts);
-
-    return (
-        <>
-            {!posts.length ? (
-                <CircularProgress />
-            ) : (
-                <Grid className={classes.mainContainer} container>
-                    {posts.map((post, index) => (
-                        <Post key={index} post={post} />
-                    ))}
+    return !posts.length ? (
+        <CircularProgress />
+    ) : (
+        <Grid
+            className={classes.mainContainer}
+            container
+            alignItems="center"
+            spacing={1}
+        >
+            {posts.map((post, index) => (
+                <Grid key={post._id} item xs={12} sm={6}>
+                    <Post post={post} />
                 </Grid>
-            )}
-        </>
+            ))}
+        </Grid>
     );
 };
 

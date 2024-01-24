@@ -40,12 +40,12 @@ const App = () => {
                         container
                         justifyContent="space-between"
                         alignItems="stretch"
-                        spacing={4}
+                        spacing={3}
                     >
-                        <Grid item xs={12} sm={7}>
+                        <Grid item xs={12} sm={6}>
                             <Posts></Posts>
                         </Grid>
-                        <Grid item xs={12} sm={7}>
+                        <Grid item xs={12} sm={6}>
                             <Form></Form>
                         </Grid>
                     </Grid>
