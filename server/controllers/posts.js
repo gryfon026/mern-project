@@ -20,5 +20,4 @@ export const createPost = async (req, res) => {
     } catch (error) {
         res.status(409).json({ message: error.message });
     }
-    res.send('Hi!');
 };
